@@ -36,14 +36,28 @@ interface Person{
     greet(phrase:string):void;
 }
 class Employee implements Person{
-    name:string;
-    age:number;
+    name:string;           // defining these quantities here again is important as 
+    age:number;            // are being used in the constructor
 
     constructor(n:string,a:number){
         this.name = n;
         this.age = a;
     }
-    greet(phrase:string):void{
+    greet(phrase:string):void{                   
         console.log(`${phrase} ${this.name})
     }
 }
+
+# Types
+ similar to interface but they provide some extra functions
+ created like interface but with an assignment operator 
+ type User = {
+    name:string;
+    age:number;
+ }
+
+ // these cant be used to implement classes and are typically used when interfaces are not enough for a task 
+
+ # > Union   = This is used when you want to define two types for a quantity (eg. number or(|) string)
+ # > Intersection  = This is used when you want to define something with every property of two types (eg. type employee = human and(&) worker)
+ 

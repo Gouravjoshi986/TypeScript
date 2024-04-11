@@ -15,6 +15,9 @@ class Employee implements Person{
         console.log(`${phrase} ${this.name}`);
     }
 }
+const employee1 = new Employee("Gourav",20);
+console.log(employee1.name,employee1.age);
+console.log(employee1.greet("Hello"));
 
 //React Component of Todo with ts
 // interface todoType{
