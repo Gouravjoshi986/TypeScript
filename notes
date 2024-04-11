@@ -60,4 +60,7 @@ class Employee implements Person{
 
  # > Union   = This is used when you want to define two types for a quantity (eg. number or(|) string)
  # > Intersection  = This is used when you want to define something with every property of two types (eg. type employee = human and(&) worker)
- 
+
+
+ // Arrays can be defined in ts using [].  (eg. :number[] :string[])
+  

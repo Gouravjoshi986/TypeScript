@@ -37,3 +37,14 @@ console.log(employee1.greet("Hello"));
 //         </div>
 //     )
 // }
+
+function maxValue(arr:number[]):number{
+    let maxi=0;
+    arr.forEach(e => {
+        if(e>maxi){
+            maxi=e;
+        }
+    });
+    return maxi;
+}
+console.log(maxValue([3,4,6,2,1]));
