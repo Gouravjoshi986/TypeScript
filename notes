@@ -1,0 +1,49 @@
+typescript is a superset of javascript. it is basically javascript with added type security.
+# typescript never runs we just write typescript and it compiles to javascript only if the type written everywhere is correct. 
+# if any error occurs during compilation , it indicates that the code is not written correctly and a mistake has been made. 
+# js is loosely typed but ts is strictly typed
+
+steps to use typescript.   
+npm install -g typescript 
+create a directory for your project where you want to use typescript 
+npm init -y    -- creates a package.json file 
+npx tsc --init    --creates a tsconfig.json file    --this file contains configurations of how your ts file will get converted into a js file
+
+// The command to generate a js file from ts file is   tsc -b
+
+// The tsconfig file has many configurations some of them are: 
+1. target -> it is the js version in which your typescript is compiled into. 
+// older versions for browsers who dont support the new ecmascript versions 
+2. rootDir -> it is the directory where the ts compiler will look for the ts files to compile them into js files       // genrally called src
+3. outDir -> it is the directory in which the compiled js files will reside // genrally called dist   
+// This dist folder is used in gitignore and you never push this dist folder to git/clients. 
+// only the type script files are pushed and used 
+4. noImplicitAny -> used when you want a little lineant type checking (just allowing implicit/any type in arguments).
+5. removeComments -> it removes comments of the ts file when converting to a js file. 
+
+# Interface 
+when you want to give type to an object you can define an interface using 
+Interface User{
+    name:string;
+    age:number:
+}
+
+// Implementing interfaces = you can also implement one interface via a class while making constructor 
+// It is mostly done when you have functions in a interface 
+interface Person{
+    name:string;
+    age:number:
+    greet(phrase:string):void;
+}
+class Employee implements Person{
+    name:string;
+    age:number;
+
+    constructor(n:string,a:number){
+        this.name = n;
+        this.age = a;
+    }
+    greet(phrase:string):void{
+        console.log(`${phrase} ${this.name})
+    }
+}
