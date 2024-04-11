@@ -62,5 +62,18 @@ class Employee implements Person{
  # > Intersection  = This is used when you want to define something with every property of two types (eg. type employee = human and(&) worker)
 
 
- // Arrays can be defined in ts using [].  (eg. :number[] :string[])
-  
+// Arrays can be defined in ts using [].  (eg. :number[] :string[])
+
+// Enums (enumeration) can be defined in ts for set of named constants
+defined as: enum Direction{
+                up,         // but in reality this will be 0 as there is no meaning of up
+                down,       // 1
+                left,       // 2
+                right       // 3
+            }
+# It is a virtual concept and not a keyword
+# You can also change this while declaring to your needs. 
+// eg. up=1 or up="UP"    
+// they can be used just like number or string types (eg. :Direction)
+// Common use case in express is for status codes  success = 200  not found = 404 etc
+

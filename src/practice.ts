@@ -44,3 +44,13 @@ const user1:User = {
 }
 
 console.log(isLegalAge(user1));
+
+enum Direction{
+    Up,             // this will be 0 in reality
+    Down,           // this will be 1 in reality
+    Left,           // this will be 2 in reality
+    Right           // this will be 3 in reality
+}
+function SayDirection(dir:Direction):void{
+    console.log(`Direction = ${dir}`);
+}
