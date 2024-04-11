@@ -77,3 +77,11 @@ defined as: enum Direction{
 // they can be used just like number or string types (eg. :Direction)
 // Common use case in express is for status codes  success = 200  not found = 404 etc
 
+# Generics 
+// It is an type independent concept.   
+// it can tackle the problem of typescript not recognizing the return type correctly when a set of mixed inputs are passed onto it or when a set can be passed ( either string or number )
+but what will be passed is not fixed breforehand. 
+<T> is used for generics as type. 
+
+# Import and export can be done via import and export statements
+
