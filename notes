@@ -85,3 +85,22 @@ but what will be passed is not fixed breforehand.
 
 # Import and export can be done via import and export statements
 
+# Pick
+Pick allows you to create a new type by selecting a set of properties (Keys) from an existing type (Type).
+syntax : type UserProfile = Pick<User, 'name' | 'email'>;
+
+# Partial
+Partial makes all properties of a type optional, creating a type with the same properties, but each marked as optional.
+// Marked by ? sign in front of the parameter
+
+You can either create it like User {
+    name?:string,         ->name is optional 
+    email:string     
+}
+or use Partial<User> -> to make both optional 
+
+# Readonly 
+When you have a configuration object that should not be altered after initialization, making it Readonly ensures its properties cannot be changed.
+interface Config 
+
+
