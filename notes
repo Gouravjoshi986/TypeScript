@@ -103,4 +103,15 @@ or use Partial<User> -> to make both optional
 When you have a configuration object that should not be altered after initialization, making it Readonly ensures its properties cannot be changed.
 interface Config 
 
+# Record And Maps 
+Record let’s you give a cleaner type to objects.  Record<string, User> to make string value as a key and type user as a value. 
+Maps are just a fancier way of handling objects.  new Map<string, User>() 
+* Then we can use .set while setting key value pairs and .get(key) to get values
+
+# Exclude 
+In a function that can accept several types of inputs but you want to exclude specific types from being passed to it.  Exclude<Event,"paramToExclude">;
+
+# Type Inference of Zod 
+you can infer type of your zod schema using: type schemaName = z.infer<typeof SchemaName>
+// It is a typescript type and it doesnt reaches js file
 
